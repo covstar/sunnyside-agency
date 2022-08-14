@@ -1,0 +1,289 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-image: url("../images/desktop/image-header.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 3rem 3rem 15rem;
+    position: relative;
+}
+ul{
+    list-style: none;
+    padding-block: none;
+}
+a{
+    text-decoration: none;
+}
+p{
+    font-family: "Barlow";
+    font-weight: 600;
+}
+h2{
+    font-family: "Fraunces";
+    font-size: 3rem;
+    font-weight: 900;
+    color: hsl(212, 27%, 19%);
+}
+.desktop{
+    display: flex;
+}
+.desktop .nav-list{
+    margin-left: auto;
+}
+.desktop .nav-list ul{
+    display: flex;
+    column-gap: 4rem;
+    flex-wrap: wrap;
+}
+.desktop .nav-list ul li a {
+    color: hsl(0, 0%, 100%);
+}
+.desktop .nav-list ul li{
+    font-family: "Barlow";
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.desktop .nav-list ul li:nth-child(4){
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 100px;
+    padding: 1rem 2rem;
+    margin-top: -1rem;
+    cursor: pointer;
+}
+.desktop .nav-list ul li:nth-child(4) a{
+    color: hsl(212, 27%, 19%);
+    font-family: "Fraunces";
+}
+.desktop .nav-list ul li:nth-child(4):hover{
+    background-color: hsl(198, 100%, 72%);
+}
+.desktop .nav-list ul li:nth-child(4):hover a{
+    color: hsl(0, 0%, 100%);
+}
+.logo img{
+    width: 11rem;
+}
+/* mobile nav  */
+.mobile{
+    display: none;
+}
+.hamburger{
+    display: none;
+    position: absolute;
+    z-index: 2;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+    visibility: hidden;
+}
+.hamburger img{
+    width: 2rem;
+}
+/* heading  */
+.heading{
+    text-align: center;
+    padding: 8rem 0;
+}
+.heading h1{
+    font-family: "Fraunces";
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: 10px;
+    color: hsl(0, 0%, 100%);
+    padding-bottom: 7rem;
+}
+/* main section  */
+.grid-layout{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: "first second"
+                        " fouth third"
+                        "fifth sixth";
+}
+.grid-layout img{
+    width: 100%;
+    height: 100%;
+}
+
+.fourth-div {
+    grid-area: fouth;
+}
+.first-div{
+    grid-area: first;
+}
+.second-div{
+    grid-area: second;
+}
+.first-div, .third-div {
+    padding: 10rem 20% 4rem;
+    background-color: hsla(7, 99%, 70%, 0);
+}
+.third-div {
+    grid-area: third;
+    padding: 10rem 15% 4rem;
+}
+.first-div h2, .third-div h2{
+    padding-bottom: 2rem;
+}
+.first-div p, .third-div p{
+    color: hsl(232, 10%, 55%);
+    line-height: 1.8;
+    padding-bottom: 2.5rem;
+}
+.first-div button, .third-div button{
+    padding: .4rem 1rem;
+    font-family: "Fraunces";
+    font-size: 1rem;
+    font-weight: 800;
+    background: linear-gradient( hsl(0, 0%, 100%) 60%,hsla(51, 100%, 49%, 0.54)) ;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+.first-div button:hover,
+.third-div button {
+
+    background: linear-gradient(hsl(0, 0%, 100%) 40%, hsl(51, 100%, 49%));
+
+}
+.third-div button{
+    background: linear-gradient(hsl(0, 0%, 100%) 60%, hsla(7, 99%, 70%, 0.447));
+}
+.third-div button:hover {
+    background: linear-gradient(hsl(0, 0%, 100%) 40%, hsl(7, 99%, 70%));
+}
+.fifth-div{
+    background-image: url("../images/desktop/image-graphic-design.jpg");
+    grid-area: fifth;
+}
+.sixth-div{
+    background-image: url("../images/desktop/image-photography.jpg");
+    grid-area: sixth;
+}
+.fifth-div, .sixth-div{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 25rem 25% 4rem;
+    text-align: center;
+}
+.fifth-div h3, .sixth-div h3{
+    font-size: 2rem;
+    font-weight: 700;
+}
+.sixth-div h3{
+    color: hsl(198, 62%, 26%);
+}
+.fifth-div h3{
+    color: hsl(167, 40%, 24%);
+}
+.fifth-div p, .sixth-div p{
+    padding: 1.5rem;
+    line-height: 1.6;
+    font-weight: 700;
+}
+.fifth-div p{
+    color: hsl(167, 40%, 24%);
+}
+.sixth-div p{
+    color: hsl(198, 62%, 26%);
+}
+/* testimonial section  */
+.testimonials{
+    padding: 12rem 0;
+    text-align: center;
+}
+.testimonials h3{
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: hsl(210, 4%, 67%);
+}
+.testimonial-layout{
+    display: flex;
+    padding: 0 10%;
+    column-gap: 2rem;
+}
+.testimonial img{
+    width: 4.5rem;
+    padding: 4rem 0;
+    border-radius: 100%;
+}
+.testimonial p{
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: hsl(213, 9%, 39%);
+}
+.info{
+    padding: 4rem 0 0;
+}
+.info h4{
+    color: hsl(212, 27%, 19%);
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+.info p{
+    font-size: .9rem;
+    color: hsl(232, 10%, 55%);
+    padding: .5rem 0;
+}
+
+/* gallery section  */
+.gallery{
+    display: flex;
+}
+.gallery img{
+    width: 25%;
+}
+ .mobile-gallery {
+     display: none;
+ }
+
+/* footer section  */
+footer{
+    background-color: hsla(168, 40%, 55%, 0.649);
+    text-align: center;
+    padding: 5rem 0 2rem;
+}
+footer .logo{
+    filter: brightness(0.1) sepia(1) saturate(8000%) hue-rotate(175deg);
+    width: 10rem;
+}
+.nav-links ul, .social-links ul{
+    display: flex;
+    justify-content: center;
+}
+.nav-links ul{
+    padding: 3rem 0 5rem;
+    column-gap: 3rem;
+}
+.nav-links ul li a{
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: hsl(167, 40%, 24%);
+    font-family: "barlow";
+}
+.nav-links ul li a:hover {
+    color: hsl(0, 0%, 100%);
+}
+.social-links ul{
+    column-gap: 2rem;
+}
+.social-links ul li a img:hover{
+    filter: brightness(0.2) invert(1);
+}
+.attribution{
+    padding: 3rem 0 0;
+    font-weight: 900;
+    color: hsl(198, 62%, 26%);
+    font-family: "barlow";
+}
+.attribution a{
+    color: hsl(212, 27%, 19%);
+}
